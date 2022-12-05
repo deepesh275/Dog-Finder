@@ -10,7 +10,7 @@ function App() {
   
   function newFun() {
     setError(false)
-    axios.get(`https://dog.ceo/api/breed/${dogbread}/images/random`)
+    axios.get(`https://dog.ceo/api/breed/${dogbread.toLocaleLowerCase()}/images/random`)
     .then(function (response) {
       // handle success
       setDogBreadimg(response.data.message)
